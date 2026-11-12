@@ -1,0 +1,605 @@
+/* ==================== VARIABLES ==================== */
+:root {
+	--honey-gold: #E8A317;
+	--amber: #9A6100;          
+	--comb-black: #1E1A16;
+	--cream: #FFF8E7;
+	--wax-white: #FFFFFF;
+	--soft-gold: #FBEBC4;     
+
+	--font-main: 'DM Sans', Helvetica, Arial, sans-serif;
+	--font-script: 'Great Vibes', 'Brush Script MT', cursive;
+}
+
+/* ==================== BASE ==================== */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: var(--comb-black);
+	font-family: var(--font-main);
+	color: var(--comb-black);
+	line-height: 1.5;
+}
+
+/* Jello layout: centered page with margin 0 auto */
+.wrapper {
+	width: 94%;
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: var(--cream);
+}
+
+h1, h2, h3 {
+	color: var(--comb-black);
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 21px;
+	color: var(--amber);
+}
+
+img {
+	max-width: 100%;
+}
+
+a {
+	color: var(--amber);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+/* ==================== HELPERS ==================== */
+.right {
+	float: right;
+	margin: 0 0 15px 20px;
+}
+
+.left {
+	float: left;
+	margin: 0 20px 15px 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.rounded {
+	border-radius: 12px;
+}
+
+.img-medium {
+	width: 45%;
+}
+
+.img-small {
+	width: 30%;
+}
+
+/* ==================== HEADER ==================== */
+header {
+	background-color: var(--wax-white);
+	border-bottom: 6px solid var(--honey-gold);
+	padding: 15px 25px;
+}
+
+.logo {
+	float: left;
+	width: 130px;
+	margin-right: 20px;
+}
+
+header h1 {
+	font-family: var(--font-script);
+	font-weight: normal;
+	font-size: 60px;
+	margin: 10px 0 0 0;
+	text-shadow: 2px 2px var(--honey-gold);
+}
+
+.tagline {
+	margin: 0;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.header-call {
+	float: right;
+	margin-top: 35px;
+	padding: 10px 18px;
+	background-color: var(--honey-gold);
+	color: var(--comb-black);
+	border-radius: 999px;
+}
+
+.header-call:hover {
+	background-color: var(--comb-black);
+	color: var(--honey-gold);
+	text-decoration: none;
+}
+
+/* ==================== NAV ==================== */
+/* sticky keeps the nav at the top while scrolling; z-index keeps it above images */
+nav {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background-color: var(--comb-black);
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a, nav a:visited {
+	display: block;
+	padding: 14px 16px;
+	color: var(--honey-gold);
+	font-weight: bold;
+}
+
+nav a:hover, nav a:active {
+	background-color: var(--honey-gold);
+	color: var(--comb-black);
+	text-decoration: none;
+}
+
+nav a.current, nav a.current:visited {
+	background-color: var(--cream);
+	color: var(--comb-black);
+}
+
+/* ==================== TWO COLUMNS ==================== */
+main {
+	width: 68%;
+	float: left;
+	padding: 10px 30px 30px 30px;
+}
+
+aside {
+	width: 32%;
+	float: right;
+	padding: 20px;
+	background-color: var(--soft-gold);
+	border-left: 4px solid var(--honey-gold);
+}
+
+/* pages without a sidebar use the full width */
+main.full {
+	width: 100%;
+	float: none;
+}
+
+main section {
+	display: flow-root;   /* keeps floated images inside their section */
+	margin-bottom: 25px;
+}
+
+/* ==================== HEADINGS ==================== */
+.section-heading {
+	border-bottom: 3px solid var(--honey-gold);
+	padding-bottom: 5px;
+	text-shadow: 1px 1px var(--soft-gold);
+}
+
+/* ==================== HOME PAGE ==================== */
+.hero {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
+	border-radius: 12px;
+	margin-top: 20px;
+}
+
+/* three boxes side by side using floats */
+.feature {
+	width: 31%;
+	float: left;
+	margin: 0 1% 20px 1%;
+	padding: 15px;
+	background-color: var(--wax-white);
+	border: 2px solid var(--honey-gold);
+	border-radius: 12px;
+	text-align: center;
+	min-height: 330px;
+}
+
+.feature img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+.feature h3 {
+	margin: 10px 0 5px 0;
+}
+
+/* ==================== SIDEBAR ==================== */
+aside h3 {
+	margin-top: 0;
+	color: var(--comb-black);
+}
+
+aside ul {
+	list-style: none;
+	padding: 0;
+}
+
+aside li {
+	padding: 8px 0;
+	border-bottom: 1px dashed var(--amber);
+}
+
+aside li:last-child {
+	border-bottom: none;
+}
+
+.callout {
+	background-color: var(--comb-black);
+	color: var(--cream);
+	padding: 15px;
+	border-radius: 12px;
+	text-align: center;
+}
+
+.callout a {
+	color: var(--honey-gold);
+}
+
+/* ==================== LISTS ==================== */
+.steps li {
+	margin-bottom: 10px;
+}
+
+.checklist {
+	list-style-type: square;
+	padding-left: 22px;
+}
+
+.checklist li {
+	padding: 5px 0;
+}
+
+/* ==================== PRODUCTS TABLE ==================== */
+.product-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 15px 0 25px 0;
+	background-color: var(--wax-white);
+}
+
+.product-table caption {
+	font-size: 22px;
+	font-weight: bold;
+	padding: 10px;
+	text-shadow: 1px 1px var(--honey-gold);
+}
+
+.product-table th {
+	background-color: var(--comb-black);
+	color: var(--honey-gold);
+	text-align: left;
+	padding: 10px;
+}
+
+.product-table td {
+	padding: 10px;
+	border-bottom: 1px solid var(--soft-gold);
+}
+
+/* structural pseudo-class: stripe every other row */
+.product-table tbody tr:nth-child(even) {
+	background-color: var(--soft-gold);
+}
+
+/* price column right aligned */
+.product-table td:nth-child(3) {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.product-table tfoot td {
+	background-color: var(--honey-gold);
+	font-style: italic;
+	border-bottom: none;
+}
+
+/* ==================== GALLERY ==================== */
+/* floated figures, three per row */
+.gallery figure {
+	width: 31.33%;
+	float: left;
+	margin: 0 1% 20px 1%;
+	background-color: var(--wax-white);
+	padding: 8px;
+	border-radius: 10px;
+	border: 1px solid var(--soft-gold);
+}
+
+/* start every row of three on a fresh line so uneven captions can't snag */
+.gallery figure:nth-child(3n+1) {
+	clear: left;
+}
+
+.gallery img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 6px;
+	opacity: 0.9;
+	transition: opacity 0.2s;
+}
+
+.gallery img:hover {
+	opacity: 1;
+}
+
+.gallery figcaption {
+	font-size: 14px;
+	text-align: center;
+	padding-top: 6px;
+}
+
+/* ==================== CONTACT FORM ==================== */
+form {
+	background-color: var(--wax-white);
+	border: 2px solid var(--honey-gold);
+	border-radius: 12px;
+	padding: 20px;
+}
+
+fieldset {
+	border: 1px solid var(--soft-gold);
+	border-radius: 8px;
+	margin-bottom: 15px;
+}
+
+legend {
+	font-weight: bold;
+	color: var(--amber);
+	padding: 0 6px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+/* the radio button labels sit on one line with their button */
+label.inline {
+	display: inline;
+	font-weight: normal;
+	margin-right: 15px;
+}
+
+input, select, textarea {
+	width: 100%;
+	padding: 8px;
+	margin-top: 4px;
+	border: 1px solid var(--amber);
+	border-radius: 6px;
+	font-family: var(--font-main);
+	font-size: 16px;
+}
+
+textarea {
+	resize: none;
+}
+
+input[type="radio"] {
+	width: auto;
+}
+
+input[type="submit"], input[type="reset"] {
+	width: auto;
+	padding: 10px 22px;
+	margin: 10px 10px 0 0;
+	border: none;
+	border-radius: 999px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	background-color: var(--honey-gold);
+	color: var(--comb-black);
+}
+
+input[type="reset"] {
+	background-color: var(--comb-black);
+	color: var(--cream);
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+	opacity: 0.85;
+}
+
+.contact-list {
+	list-style: none;
+	padding: 0;
+}
+
+.contact-list li {
+	margin-bottom: 8px;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+	clear: both;
+	background-color: var(--comb-black);
+	color: var(--cream);
+	padding: 20px 25px 10px 25px;
+}
+
+.footer-col {
+	width: 33.33%;
+	float: left;
+	padding: 0 10px;
+}
+
+footer h4 {
+	color: var(--honey-gold);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+
+footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+footer a, footer a:visited {
+	color: var(--cream);
+	font-weight: normal;
+}
+
+footer a:hover {
+	color: var(--honey-gold);
+}
+
+.copyright {
+	clear: both;
+	text-align: center;
+	font-size: 14px;
+	border-top: 1px solid var(--amber);
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+.back-to-top {
+	text-align: center;
+}
+
+.back-to-top a {
+	color: var(--honey-gold);
+	font-weight: bold;
+}
+
+/* ==================== MOBILE ==================== */
+@media screen and (max-width: 800px) {
+	.wrapper {
+		width: 100%;
+	}
+
+	.logo {
+		width: 90px;
+	}
+
+	header h1 {
+		font-size: 44px;
+	}
+
+	.header-call {
+		float: none;
+		display: inline-block;
+		margin-top: 10px;
+	}
+
+	nav a {
+		padding: 10px 10px;
+	}
+
+	main, aside {
+		float: none;
+		width: 100%;
+	}
+
+	main {
+		padding: 10px 18px 20px 18px;
+	}
+
+	aside {
+		border-left: none;
+		border-top: 4px solid var(--honey-gold);
+	}
+
+	.right, .left {
+		float: none;
+		display: block;
+		margin: 10px auto;
+	}
+
+	.img-medium, .img-small {
+		width: 100%;
+	}
+
+	.feature {
+		float: none;
+		width: 100%;
+		margin: 0 0 15px 0;
+		min-height: 0;
+	}
+
+	/* two gallery pictures per row on phones */
+	.gallery figure {
+		width: 48%;
+	}
+
+	.gallery figure:nth-child(3n+1) {
+		clear: none;
+	}
+
+	.gallery figure:nth-child(2n+1) {
+		clear: left;
+	}
+
+	.footer-col {
+		float: none;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+	}
+
+	.hero {
+		height: 200px;
+	}
+}
+
+/* ==================== PRINT ==================== */
+@media print {
+	nav, aside, .header-call, .back-to-top, form, .gallery {
+		display: none;
+	}
+
+	body, .wrapper, header, footer, main {
+		background: none;
+		color: black;
+	}
+
+	main {
+		width: 100%;
+		float: none;
+	}
+
+	footer a, footer h4 {
+		color: black;
+	}
+
+	.product-table th {
+		background: none;
+		color: black;
+		border-bottom: 2px solid black;
+	}
+}
