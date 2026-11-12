@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Contact TR Honey or send an order request.">
+		<title>Contact &amp; Order | TR Honey, Dublin GA</title>
+		<link rel="icon" href="img/favicon.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="wrapper">
+
+			<!-- ==================== HEADER (same on every page) ==================== -->
+			<header id="top">
+				<img src="img/logo.png" alt="TR Honey logo: a hexagon with dripping honey" class="logo">
+				<a href="tel:+14782789052" class="header-call">Call or Text (478) 278-9052</a>
+				<h1>TR Honey</h1>
+				<p class="tagline">Local honey from the hives of Dublin, Georgia</p>
+				<div class="clear"></div>
+			</header>
+
+			<!-- ==================== NAV (class="current" marks this page) ==================== -->
+			<nav>
+				<ul>
+					<li><a href="index.htm">Home</a></li>
+					<li><a href="beekeeper.htm">The Beekeeper</a></li>
+					<li><a href="honey.htm">Our Honey</a></li>
+					<li><a href="bees.htm">About the Bees</a></li>
+					<li><a href="gallery.htm">Gallery</a></li>
+					<li><a href="contact.htm" class="current">Contact &amp; Order</a></li>
+				</ul>
+			</nav>
+
+			<main>
+				<h2 class="section-heading">Contact &amp; Order</h2>
+				<p>Want some honey? Fill out the form and we'll get back to you to confirm what is in stock and set up a pickup. You can also call or text any time.</p>
+
+				<form>
+					<fieldset>
+						<legend>Your Info</legend>
+						<label for="name">Name</label>
+						<input type="text" id="name" name="name" required>
+
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" required>
+
+						<label for="phone">Phone</label>
+						<input type="tel" id="phone" name="phone">
+					</fieldset>
+
+					<fieldset>
+						<legend>Your Order</legend>
+						<label for="product">Product</label>
+						<select id="product" name="product">
+							<option value="honey-8oz">Local Honey, 8 oz</option>
+							<option value="honey-pint">Local Honey, 1 pint</option>
+							<option value="honey-quart">Local Honey, 1 quart</option>
+							<option value="beeswax">Beeswax Block</option>
+							<option value="lip-balm">Beeswax Lip Balm</option>
+						</select>
+
+						<label for="quantity">Quantity</label>
+						<input type="number" id="quantity" name="quantity" min="1" max="20" value="1">
+
+						<fieldset>
+							<legend>Best way to reach you</legend>
+							<input type="radio" id="reach-call" name="reach" value="call" checked>
+							<label for="reach-call" class="inline">Call</label>
+							<input type="radio" id="reach-text" name="reach" value="text">
+							<label for="reach-text" class="inline">Text</label>
+							<input type="radio" id="reach-email" name="reach" value="email">
+							<label for="reach-email" class="inline">Email</label>
+						</fieldset>
+					</fieldset>
+
+					<label for="message">Message</label>
+					<textarea id="message" name="message" rows="5"></textarea>
+
+					<input type="submit" value="Send Request">
+					<input type="reset" value="Clear Form">
+				</form>
+			</main>
+
+			<aside>
+				<h3>Reach Us Directly</h3>
+				<ul class="contact-list">
+					<li><strong>Phone:</strong> <a href="tel:+14782789052">(478) 278-9052</a></li>
+					<li><strong>Email:</strong> <a href="mailto:trhoney518@gmail.com">trhoney518@gmail.com</a></li>
+					<li><strong>Location:</strong> Dublin, GA</li>
+				</ul>
+				<img src="img/hive-entrance.jpg" alt="Bees coming and going at a hive entrance" class="rounded">
+				<p>Pickup is local in the Dublin area. We will set up a time when we confirm your order.</p>
+			</aside>
+
+			<!-- ==================== FOOTER (same on every page) ==================== -->
+			<footer>
+				<div class="footer-col">
+					<h4>TR Honey</h4>
+					<p>Small batch honey and hive goods from Dublin, Georgia.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Contact</h4>
+					<ul>
+						<li><a href="tel:+14782789052">(478) 278-9052</a></li>
+						<li><a href="mailto:trhoney518@gmail.com">trhoney518@gmail.com</a></li>
+						<li>Dublin, GA</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h4>Pages</h4>
+					<ul>
+					<li><a href="index.htm">Home</a></li>
+					<li><a href="beekeeper.htm">The Beekeeper</a></li>
+					<li><a href="honey.htm">Our Honey</a></li>
+					<li><a href="bees.htm">About the Bees</a></li>
+					<li><a href="gallery.htm">Gallery</a></li>
+					<li><a href="contact.htm">Contact &amp; Order</a></li>
+					</ul>
+				</div>
+				<p class="back-to-top"><a href="#top">Back to Top</a></p>
+				<p class="copyright">&copy; 2026 TR Honey. Website by Patrick Boatright.</p>
+			</footer>
+		</div><!-- end wrapper -->
+	</body>
+</html>
